@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content') 
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -8,8 +8,8 @@
                 <div class="card-header">{{ $title ?? "" }} {{ __('Login') }}</div>
 
                 <div class="card-body">
-                    @isset($url)
-                        <form method="POST" action="{{ $url }}">
+                    @isset($route)
+                        <form method="POST" action="{{ $route }}">
                     @else
                         <form method="POST" action="{{ route('login') }}">
                     @endisset
